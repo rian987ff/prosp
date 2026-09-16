@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desatadora dos Nós — Assista agora</title>
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17995427129"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17995427129');
+  </script>
+  <link rel="preload" href="https://scripts.converteai.net/434d92fb-ac18-49de-86e2-8a964f7d7d9e/players/6aaa36d6278b10ddc7f20f89/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://license.vturb.com">
+  <meta name="description" content="Assista à oração completa de Nossa Senhora Desatadora dos Nós.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      background-color: #f5f3ef;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Área principal ── */
+    .main {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px 16px;
+    }
+
+    /* ── Wrapper do vídeo ── */
+    .video-wrapper {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Placeholder — remover quando colar o embed da vturb */
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      text-align: center;
+      padding: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .video-placeholder svg {
+      opacity: 0.4;
+    }
+
+    /* O embed da vturb vai direto aqui dentro do .video-wrapper */
+    /* Substitua o .video-placeholder pelo código que a vturb gerar  */
+
+    /* Desktop: limitar tamanho e dar margem */
+    @media (min-width: 600px) {
+      .video-wrapper {
+        max-width: 360px;
+      }
+    }
+
+    /* ── Rodapé ── */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 20px 16px 28px;
+      color: #a09888;
+    }
+
+    .footer-links {
+      font-size: 12px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .footer-links a {
+      color: #a09888;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #5c3d1e;
+      text-decoration: underline;
+    }
+
+    .footer-links .sep {
+      color: #c8bfb0;
+    }
+
+    .footer-disclaimer {
+      font-size: 11px;
+      color: #b8b0a0;
+      line-height: 1.65;
+      max-width: 480px;
+      margin: 0 auto 6px;
+    }
+
+    .footer-copyright {
+      font-size: 11px;
+      color: #b8b0a0;
+    }
+
+    /* ══════════════ MODAIS ══════════════ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 8, 2, 0.72);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      opacity: 0;
+    }
+
+    .modal-overlay.visible {
+      opacity: 1;
+    }
+
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      max-width: 560px;
+      width: 100%;
+      max-height: 82vh;
+      overflow-y: auto;
+      padding: 32px 28px;
+      position: relative;
+      transform: translateY(22px);
+      transition: transform 0.3s ease;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .modal-overlay.visible .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-box h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1c1208;
+      margin-bottom: 16px;
+      padding-right: 32px;
+    }
+
+    .modal-box p,
+    .modal-box li {
+      font-size: 13.5px;
+      line-height: 1.72;
+      color: #4a3525;
+      margin-bottom: 10px;
+    }
+
+    .modal-box ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .modal-box strong {
+      color: #1c1208;
+    }
+
+    .modal-box a {
+      color: #7a5530;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #9a7b4f;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: #f0e8d8;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main">
+    <div class="video-wrapper" id="vturb-container">
+
+      <!-- ══ EMBED VTURB ══ -->
+      <vturb-smartplayer id="vid-6aaa36d6278b10ddc7f20f89" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+      <script type="text/javascript">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/434d92fb-ac18-49de-86e2-8a964f7d7d9e/players/6aaa36d6278b10ddc7f20f89/v4/player.js";
+        s.async = !0;
+        document.head.appendChild(s);
+      </script>
+      <!-- ══ FIM EMBED VTURB ══ -->
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a id="link-termos-view" onclick="openModal('modal-termos')">Termos de Uso</a>
+      <span class="sep">|</span>
+      <a id="link-privacidade-view" onclick="openModal('modal-privacidade')">Política de Privacidade</a>
+    </div>
+    <p class="footer-disclaimer">
+      Este site não tem qualquer vínculo com o YouTube ou o Google. Depois que você sai dessas plataformas, a responsabilidade passa a ser nossa, não deles.
+    </p>
+    <p class="footer-copyright">© 2026 Desatadora dos Nós. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ══ MODAL: Termos de Uso ══ -->
+  <div class="modal-overlay" id="modal-termos" role="dialog" aria-modal="true" aria-labelledby="termos-titulo-view">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-termos')" aria-label="Fechar">&times;</button>
+      <h2 id="termos-titulo-view">Termos de Uso</h2>
+      <p><strong>Última atualização:</strong> setembro de 2026</p>
+      <p>Ao acessar e utilizar este site, você concorda com os presentes Termos de Uso. Leia com atenção antes de prosseguir.</p>
+      <p><strong>1. Sobre o conteúdo</strong><br>
+      O conteúdo disponibilizado neste site é de caráter espiritual e devocional. Não substitui acompanhamento médico, psicológico ou jurídico. O site não faz promessas de resultados específicos.</p>
+      <p><strong>2. Propriedade intelectual</strong><br>
+      Todo o conteúdo deste site — textos, imagens, áudios e vídeos — é de propriedade exclusiva de Desatadora dos Nós ou licenciado por seus criadores. É proibida a reprodução sem autorização expressa.</p>
+      <p><strong>3. Uso adequado</strong><br>
+      Você concorda em utilizar este site apenas para fins lícitos e pessoais. É vedado qualquer uso que viole direitos de terceiros, leis aplicáveis ou a integridade do site.</p>
+      <p><strong>4. Limitação de responsabilidade</strong><br>
+      Este site é fornecido "como está", sem garantias de qualquer natureza. Não nos responsabilizamos por quaisquer danos diretos ou indiretos resultantes do uso ou impossibilidade de uso deste site.</p>
+      <p><strong>5. Links externos</strong><br>
+      Este site pode conter links para sites de terceiros. Não nos responsabilizamos pelo conteúdo ou práticas de privacidade desses sites.</p>
+      <p><strong>6. Alterações</strong><br>
+      Reservamo-nos o direito de modificar estes Termos a qualquer momento. Recomendamos revisá-los periodicamente.</p>
+      <p><strong>7. Contato</strong><br>
+      Dúvidas sobre estes Termos podem ser encaminhadas pelo e-mail disponível neste site.</p>
+    </div>
+  </div>
+
+  <!-- ══ MODAL: Política de Privacidade ══ -->
+  <div class="modal-overlay" id="modal-privacidade" role="dialog" aria-modal="true" aria-labelledby="privacidade-titulo-view">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-privacidade')" aria-label="Fechar">&times;</button>
+      <h2 id="privacidade-titulo-view">Política de Privacidade</h2>
+      <p><strong>Última atualização:</strong> setembro de 2026</p>
+      <p>Esta Política descreve como coletamos, usamos e protegemos suas informações ao visitar nosso site, em conformidade com a LGPD (Lei nº 13.709/2018) e as diretrizes do Google.</p>
+      <p><strong>1. Dados coletados</strong><br>
+      Podemos coletar automaticamente informações como endereço IP, tipo de navegador, páginas visitadas e tempo de permanência, por meio de cookies e tecnologias similares.</p>
+      <p><strong>2. Como usamos seus dados</strong></p>
+      <ul>
+        <li>Melhorar a experiência de navegação;</li>
+        <li>Analisar o tráfego e comportamento no site (Google Analytics);</li>
+        <li>Exibir anúncios relevantes por meio do Google Ads e redes parceiras;</li>
+        <li>Garantir a segurança e o funcionamento correto do site.</li>
+      </ul>
+      <p><strong>3. Google e publicidade</strong><br>
+      Este site pode utilizar o Google Analytics e o Google AdSense. O Google pode usar cookies para exibir anúncios com base em visitas anteriores a este ou a outros sites. Você pode desativar a personalização de anúncios em <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">google.com/settings/ads</a>.</p>
+      <p><strong>4. Cookies</strong><br>
+      Utilizamos cookies funcionais e analíticos. Ao continuar navegando, você consente com o uso de cookies conforme descrito nesta política. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar a experiência no site.</p>
+      <p><strong>5. Compartilhamento de dados</strong><br>
+      Não vendemos seus dados pessoais. Podemos compartilhá-los com prestadores de serviços que nos auxiliam na operação do site, sempre sob obrigação de confidencialidade.</p>
+      <p><strong>6. Seus direitos (LGPD)</strong><br>
+      Você tem o direito de acessar, corrigir, portar ou solicitar a exclusão de seus dados pessoais. Para exercer esses direitos, entre em contato conosco.</p>
+      <p><strong>7. Retenção de dados</strong><br>
+      Os dados são retidos pelo tempo necessário para as finalidades descritas ou conforme exigido por lei.</p>
+      <p><strong>8. Alterações</strong><br>
+      Esta Política pode ser atualizada periodicamente. Recomendamos revisá-la regularmente.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      const overlay = document.getElementById(id);
+      overlay.style.display = 'flex';
+      overlay.classList.add('active');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          overlay.classList.add('visible');
+        });
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      const overlay = document.getElementById(id);
+      overlay.classList.remove('visible');
+      setTimeout(() => {
+        overlay.classList.remove('active');
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 260);
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal(overlay.id);
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(overlay => {
+          closeModal(overlay.id);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

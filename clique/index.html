@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oração das 7 Palavras — Nossa Senhora Desatadora dos Nós</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17995427129"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17995427129');
+  </script>
+  <meta name="description" content="Os nós que você já não consegue desatar ela desata por você. Ouça agora a Oração das 7 Palavras com Nossa Senhora Desatadora dos Nós.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+    }
+
+    body {
+      background-color: #f0ebe0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px 16px 32px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 32px rgba(100, 70, 30, 0.12);
+      max-width: 420px;
+      width: 100%;
+      padding: 36px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    /* ── Imagem circular ── */
+    .image-wrapper {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(100, 70, 20, 0.18);
+      flex-shrink: 0;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #9a7b4f;
+    }
+
+    /* ── Título principal ── */
+    .headline {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.28;
+      color: #2c1a0e;
+    }
+
+    .headline em {
+      font-style: italic;
+      color: #9a7b4f;
+    }
+
+    /* ── CTA Button ── */
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: #5c3d1e;
+      color: #fff;
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+      padding: 18px 28px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(92, 61, 30, 0.35);
+      letter-spacing: 0.2px;
+    }
+
+    .cta-btn:hover {
+      background: #7a4f28;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(92, 61, 30, 0.4);
+    }
+
+    .cta-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(92, 61, 30, 0.3);
+    }
+
+    /* ── Sub do botão ── */
+    .cta-sub {
+      font-size: 12px;
+      color: #b09070;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-top: -8px;
+    }
+
+    /* ── Texto descritivo ── */
+    .description {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #5a4535;
+      text-align: center;
+      border-top: 1px solid #f0e8d8;
+      padding-top: 18px;
+      width: 100%;
+    }
+
+    .description strong {
+      font-weight: 700;
+      color: #2c1a0e;
+    }
+
+    /* ── Rodapé do card ── */
+    .card-footer {
+      font-size: 11.5px;
+      color: #b09070;
+      text-align: center;
+      border-top: 1px solid #f0e8d8;
+      padding-top: 16px;
+      width: 100%;
+      line-height: 1.8;
+    }
+
+    .card-footer .copyright {
+      margin-bottom: 4px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .footer-links a {
+      color: #9a7b4f;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #5c3d1e;
+      text-decoration: underline;
+    }
+
+    .footer-links .sep {
+      color: #c8b090;
+    }
+
+    /* ══════════════ MODAIS ══════════════ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 10, 2, 0.72);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      opacity: 0;
+    }
+
+    .modal-overlay.visible {
+      opacity: 1;
+    }
+
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      max-width: 560px;
+      width: 100%;
+      max-height: 82vh;
+      overflow-y: auto;
+      padding: 32px 28px;
+      position: relative;
+      transform: translateY(22px);
+      transition: transform 0.3s ease;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .modal-overlay.visible .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-box h2 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #2c1a0e;
+      margin-bottom: 16px;
+      padding-right: 32px;
+    }
+
+    .modal-box p,
+    .modal-box li {
+      font-size: 13.5px;
+      line-height: 1.72;
+      color: #4a3525;
+      margin-bottom: 10px;
+    }
+
+    .modal-box ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .modal-box strong {
+      color: #2c1a0e;
+    }
+
+    .modal-box a {
+      color: #9a7b4f;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #9a7b4f;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: #f0e8d8;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 380px) {
+      .card {
+        padding: 28px 18px 24px;
+        gap: 16px;
+      }
+      .headline {
+        font-size: 24px;
+      }
+      .image-wrapper {
+        width: 170px;
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Imagem circular -->
+    <div class="image-wrapper">
+      <img src="/public/imagem-presell.png" alt="Nossa Senhora Desatadora dos Nós" loading="eager">
+    </div>
+
+    <!-- Eyebrow -->
+    <p class="eyebrow">Oração das 7 Palavras</p>
+
+    <!-- Headline -->
+    <h1 class="headline">
+      Os nós que você já não consegue desatar <em>ela desata por você</em>
+    </h1>
+
+    <!-- CTA -->
+    <a href="/view/" class="cta-btn" id="btn-ouvir-oracao">Ouvir a oração agora</a>
+    <p class="cta-sub">Conteúdo gratuito · acesso imediato</p>
+
+    <!-- Descrição -->
+    <p class="description">
+      Há nós que carregamos sozinhos por anos — na saúde, no trabalho, na família.
+      <strong>Nossa Senhora Desatadora dos Nós</strong> intercede por quem entrega esses nós a ela em oração.
+    </p>
+
+    <!-- Rodapé do card -->
+    <div class="card-footer">
+      <p class="copyright">© 2026 Desatadora dos Nós. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a id="link-termos-clique" onclick="openModal('modal-termos')">Termos de Uso</a>
+        <span class="sep">·</span>
+        <a id="link-privacidade-clique" onclick="openModal('modal-privacidade')">Privacidade</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ MODAL: Termos de Uso ══ -->
+  <div class="modal-overlay" id="modal-termos" role="dialog" aria-modal="true" aria-labelledby="termos-titulo">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-termos')" aria-label="Fechar">&times;</button>
+      <h2 id="termos-titulo">Termos de Uso</h2>
+      <p><strong>Última atualização:</strong> setembro de 2026</p>
+      <p>Ao acessar e utilizar este site, você concorda com os presentes Termos de Uso. Leia com atenção antes de prosseguir.</p>
+      <p><strong>1. Sobre o conteúdo</strong><br>
+      O conteúdo disponibilizado neste site é de caráter espiritual e devocional. Não substitui acompanhamento médico, psicológico ou jurídico. O site não faz promessas de resultados específicos.</p>
+      <p><strong>2. Propriedade intelectual</strong><br>
+      Todo o conteúdo deste site — textos, imagens, áudios e vídeos — é de propriedade exclusiva de Desatadora dos Nós ou licenciado por seus criadores. É proibida a reprodução sem autorização expressa.</p>
+      <p><strong>3. Uso adequado</strong><br>
+      Você concorda em utilizar este site apenas para fins lícitos e pessoais. É vedado qualquer uso que viole direitos de terceiros, leis aplicáveis ou a integridade do site.</p>
+      <p><strong>4. Limitação de responsabilidade</strong><br>
+      Este site é fornecido "como está", sem garantias de qualquer natureza. Não nos responsabilizamos por quaisquer danos diretos ou indiretos resultantes do uso ou impossibilidade de uso deste site.</p>
+      <p><strong>5. Links externos</strong><br>
+      Este site pode conter links para sites de terceiros. Não nos responsabilizamos pelo conteúdo ou práticas de privacidade desses sites.</p>
+      <p><strong>6. Alterações</strong><br>
+      Reservamo-nos o direito de modificar estes Termos a qualquer momento. Recomendamos revisá-los periodicamente.</p>
+      <p><strong>7. Contato</strong><br>
+      Dúvidas sobre estes Termos podem ser encaminhadas pelo e-mail disponível neste site.</p>
+    </div>
+  </div>
+
+  <!-- ══ MODAL: Política de Privacidade ══ -->
+  <div class="modal-overlay" id="modal-privacidade" role="dialog" aria-modal="true" aria-labelledby="privacidade-titulo">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-privacidade')" aria-label="Fechar">&times;</button>
+      <h2 id="privacidade-titulo">Política de Privacidade</h2>
+      <p><strong>Última atualização:</strong> setembro de 2026</p>
+      <p>Esta Política descreve como coletamos, usamos e protegemos suas informações ao visitar nosso site, em conformidade com a LGPD (Lei nº 13.709/2018) e as diretrizes do Google.</p>
+      <p><strong>1. Dados coletados</strong><br>
+      Podemos coletar automaticamente informações como endereço IP, tipo de navegador, páginas visitadas e tempo de permanência, por meio de cookies e tecnologias similares.</p>
+      <p><strong>2. Como usamos seus dados</strong></p>
+      <ul>
+        <li>Melhorar a experiência de navegação;</li>
+        <li>Analisar o tráfego e comportamento no site (Google Analytics);</li>
+        <li>Exibir anúncios relevantes por meio do Google Ads e redes parceiras;</li>
+        <li>Garantir a segurança e o funcionamento correto do site.</li>
+      </ul>
+      <p><strong>3. Google e publicidade</strong><br>
+      Este site pode utilizar o Google Analytics e o Google AdSense. O Google pode usar cookies para exibir anúncios com base em visitas anteriores a este ou a outros sites. Você pode desativar a personalização de anúncios em <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">google.com/settings/ads</a>.</p>
+      <p><strong>4. Cookies</strong><br>
+      Utilizamos cookies funcionais e analíticos. Ao continuar navegando, você consente com o uso de cookies conforme descrito nesta política. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar a experiência no site.</p>
+      <p><strong>5. Compartilhamento de dados</strong><br>
+      Não vendemos seus dados pessoais. Podemos compartilhá-los com prestadores de serviços que nos auxiliam na operação do site, sempre sob obrigação de confidencialidade.</p>
+      <p><strong>6. Seus direitos (LGPD)</strong><br>
+      Você tem o direito de acessar, corrigir, portar ou solicitar a exclusão de seus dados pessoais. Para exercer esses direitos, entre em contato conosco.</p>
+      <p><strong>7. Retenção de dados</strong><br>
+      Os dados são retidos pelo tempo necessário para as finalidades descritas ou conforme exigido por lei.</p>
+      <p><strong>8. Alterações</strong><br>
+      Esta Política pode ser atualizada periodicamente. Recomendamos revisá-la regularmente.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      const overlay = document.getElementById(id);
+      overlay.style.display = 'flex';
+      overlay.classList.add('active');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          overlay.classList.add('visible');
+        });
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      const overlay = document.getElementById(id);
+      overlay.classList.remove('visible');
+      setTimeout(() => {
+        overlay.classList.remove('active');
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 260);
+    }
+
+    // Fechar clicando fora do box
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal(overlay.id);
+      });
+    });
+
+    // Fechar com ESC
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(overlay => {
+          closeModal(overlay.id);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
