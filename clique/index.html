@@ -432,7 +432,6 @@
     });
 
     // ── Repasse de parâmetros: tftk + UTMs ──
-    // Lê os parâmetros da URL atual e adiciona no link do CTA
     (function () {
       const PARAMS = ['tftk', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
       const current = new URLSearchParams(window.location.search);
@@ -440,12 +439,18 @@
 
       PARAMS.forEach(function (key) {
         const val = current.get(key);
-        if (val) forward.set(key, val);
+        if (val) {
+          forward.set(key, val);
+          // Salva no sessionStorage como backup
+          sessionStorage.setItem(key, val);
+        }
       });
 
       const btn = document.getElementById('btn-ouvir-oracao');
-      if (btn && forward.toString()) {
-        btn.href = '/view/?' + forward.toString();
+      if (btn) {
+        // Sempre constrói a URL com o que tiver disponível
+        const query = forward.toString();
+        btn.href = '/view/' + (query ? '?' + query : '');
       }
     })();
   </script>

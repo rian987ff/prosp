@@ -354,6 +354,30 @@
         });
       }
     });
+
+    // ── Recuperação de tftk + UTMs do sessionStorage ──
+    // Se o token não veio na URL mas está salvo da presell, adiciona e recarrega
+    (function () {
+      const PARAMS = ['tftk', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+      const current = new URLSearchParams(window.location.search);
+      const merged = new URLSearchParams(window.location.search);
+      let changed = false;
+
+      PARAMS.forEach(function (key) {
+        if (!current.get(key)) {
+          const stored = sessionStorage.getItem(key);
+          if (stored) {
+            merged.set(key, stored);
+            changed = true;
+          }
+        }
+      });
+
+      // Se faltou algum parâmetro, recarrega a URL com os valores recuperados
+      if (changed) {
+        window.history.replaceState(null, '', '/view/?' + merged.toString());
+      }
+    })();
   </script>
 
 </body>
