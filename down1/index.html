@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bênção Especial: Grimório dos Santos Arcanjos — 60% de Desconto</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- UTMify & Tracking -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+  <script>
+    window.googlePixelId = "6a052935a823e9c41c568ab7";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+    document.head.appendChild(a);
+  </script>
+
+  <!-- Google Fonts: Lora (Litúrgico/Sacro) & Plus Jakarta Sans (Clareza e Conversão) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-cream: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f4efe6;
+      --border-liturgical: #e8ded1;
+      --border-gold: #d4a359;
+      --gold-primary: #b47b20;
+      --gold-dark: #8c5d10;
+      --gold-light: #fef8ee;
+      --carmelite-red: #8b1c14;
+      --carmelite-light: #fdf2f1;
+      --emerald-dark: #046a48;
+      --emerald-vibrant: #059669;
+      --text-main: #231b14;
+      --text-muted: #6e6459;
+      --text-light: #8e8275;
+      --font-serif: 'Lora', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Barra de Alerta Sacra Superior ── */
+    .urgency-bar {
+      background: linear-gradient(90deg, #78130d 0%, #991b1b 50%, #78130d 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 11px 16px;
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      box-shadow: 0 3px 12px rgba(120, 19, 13, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ── Container ── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 18px 56px;
+    }
+
+    /* ── Emblema Católico ── */
+    .sacred-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      border-radius: 999px;
+      color: var(--gold-dark);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin: 0 auto 16px;
+    }
+
+    .header-center {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    /* ── Headline Sacra ── */
+    .main-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(26px, 6vw, 36px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      letter-spacing: -0.2px;
+    }
+
+    .main-headline .highlight-gold {
+      color: var(--gold-primary);
+      font-style: italic;
+    }
+
+    .main-headline .highlight-crimson {
+      color: var(--carmelite-red);
+    }
+
+    .subtitle {
+      font-size: clamp(15px, 4vw, 17px);
+      color: var(--text-muted);
+      line-height: 1.55;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .subtitle strong {
+      color: var(--text-main);
+    }
+
+    .discount-highlight {
+      display: inline-block;
+      color: var(--carmelite-red);
+      font-weight: 800;
+      background: var(--carmelite-light);
+      padding: 1px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(139, 28, 20, 0.15);
+    }
+
+    /* ── Caixa de Confirmação da Novena ── */
+    .success-box {
+      background: #ffffff;
+      border: 1.5px solid #cce3d5;
+      border-left: 5px solid var(--emerald-vibrant);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 18px rgba(4, 106, 72, 0.05);
+    }
+
+    .success-box .success-title {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--emerald-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: -0.2px;
+    }
+
+    .success-box p {
+      font-size: 14px;
+      color: #3b352e;
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+
+    .success-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Seções & Títulos ── */
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 5vw, 24px);
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 32px 0 14px;
+      line-height: 1.3;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '✦';
+      color: var(--gold-primary);
+      font-size: 16px;
+    }
+
+    /* ── Caixa de Quebra de Objeções ── */
+    .objections-box {
+      background: #ffffff;
+      border: 1px solid var(--border-liturgical);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(44, 26, 14, 0.04);
+      margin-bottom: 28px;
+    }
+
+    .objections-box p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .obj-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-subtle);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #443c33;
+      font-style: italic;
+    }
+
+    .obj-item .icon-cross {
+      color: var(--carmelite-red);
+      font-weight: 800;
+      font-size: 15px;
+      flex-shrink: 0;
+      line-height: 1.4;
+      font-style: normal;
+    }
+
+    .discount-callout {
+      background: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 16px;
+      font-size: 14.5px;
+      color: var(--gold-dark);
+      line-height: 1.5;
+    }
+
+    .discount-callout strong {
+      color: var(--carmelite-red);
+      font-weight: 800;
+    }
+
+    /* ── Apresentação do Produto ── */
+    .product-desc {
+      background: #ffffff;
+      border: 1px solid var(--border-liturgical);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(44, 26, 14, 0.04);
+      margin-bottom: 28px;
+    }
+
+    .product-desc p {
+      font-size: 15px;
+      color: #3b352e;
+      line-height: 1.65;
+    }
+
+    .archangels-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    @media (min-width: 520px) {
+      .archangels-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .archangel-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-liturgical);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .archangel-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .archangel-name {
+      font-family: var(--font-serif);
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .archangel-role {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    /* ── Imagem do Grimório ── */
+    .grimorio-hero {
+      text-align: center;
+      margin: 28px 0 22px;
+      position: relative;
+    }
+
+    .grimorio-hero img {
+      max-width: 100%;
+      width: 380px;
+      border-radius: 16px;
+      box-shadow: 0 16px 36px rgba(44, 26, 14, 0.18), 0 0 0 1px rgba(212, 163, 89, 0.35);
+      transition: transform 0.3s ease;
+    }
+
+    /* ── Box de Preço Sacro (Alta Conversão) ── */
+    .price-box {
+      background: #ffffff;
+      border: 2px solid var(--border-gold);
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 12px 36px rgba(180, 123, 32, 0.12);
+      position: relative;
+      margin: 28px 0;
+    }
+
+    .price-anchor-wrap {
+      margin-bottom: 12px;
+    }
+
+    .old-price-label {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 600;
+    }
+
+    .old-price-val {
+      font-size: 20px;
+      color: #9c9184;
+      text-decoration: line-through;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Badge Percentual de 60% OFF */
+    .badge-discount-percent {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(180, 83, 9, 0.3);
+      margin: 10px 0 16px;
+    }
+
+    .special-offer-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    /* Preço em Destaque */
+    .price-highlight-card {
+      background: linear-gradient(135deg, #056845 0%, #064e3b 100%);
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      box-shadow: 0 8px 24px rgba(4, 106, 72, 0.28);
+      margin-bottom: 12px;
+    }
+
+    .price-highlight-card .installments {
+      font-size: clamp(30px, 8vw, 38px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .price-highlight-card .installment-sub {
+      font-size: 12px;
+      color: #a7f3d0;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .cash-price-row {
+      font-size: 17px;
+      color: var(--text-main);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .economy-text {
+      font-size: 13px;
+      color: var(--emerald-dark);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    /* ── Botão de Compra Primário ── */
+    .btn-sacred-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+      color: #ffffff;
+      font-size: clamp(15px, 4.2vw, 17px);
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      line-height: 1.3;
+      text-align: center;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 10px 28px rgba(5, 150, 105, 0.45);
+      transition: all 0.2s ease;
+      animation: gentlePulse 2.4s infinite ease-in-out;
+    }
+
+    @keyframes gentlePulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 28px rgba(5, 150, 105, 0.45);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 14px 34px rgba(5, 150, 105, 0.6);
+      }
+    }
+
+    .btn-sacred-cta:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+
+    .btn-sacred-cta:active {
+      transform: scale(0.98);
+    }
+
+    /* ── Botão de Recusa ── */
+    .btn-refuse-sacred {
+      display: block;
+      width: fit-content;
+      margin: 16px auto 0;
+      color: var(--text-light);
+      font-size: 12.5px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+      text-align: center;
+      transition: color 0.2s ease;
+      line-height: 1.4;
+      max-width: 320px;
+    }
+
+    .btn-refuse-sacred:hover {
+      color: #4a4036;
+    }
+
+    /* ── Benefícios Litúrgicos ── */
+    .benefits-card {
+      background: #ffffff;
+      border: 1px solid var(--border-liturgical);
+      border-radius: 14px;
+      padding: 24px 20px;
+      margin: 30px 0;
+      box-shadow: 0 4px 20px rgba(44, 26, 14, 0.04);
+    }
+
+    .benefits-header {
+      font-family: var(--font-serif);
+      font-size: 17.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--border-liturgical);
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .benefit-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .benefit-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .benefit-text {
+      font-size: 14.5px;
+      color: #3b352e;
+      line-height: 1.5;
+    }
+
+    .benefit-text strong {
+      color: var(--text-main);
+    }
+
+    /* ── Selo de Segurança Sacro ── */
+    .security-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-top: 14px;
+    }
+
+    .security-note svg {
+      color: var(--emerald-vibrant);
+    }
+
+    /* ── Footer ── */
+    .sacred-footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-liturgical);
+      line-height: 1.6;
+    }
+
+    /* ── Otimizações Mobile ── */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 14px 44px;
+      }
+      .price-box {
+        padding: 22px 14px;
+        border-radius: 14px;
+      }
+      .btn-sacred-cta {
+        padding: 16px 14px;
+        font-size: 14.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Urgência Solene -->
+  <aside class="urgency-bar">
+    <span>✦</span>
+    <span>GRAÇA DISPONÍVEL APENAS NESTA PÁGINA — NÃO FECHE ANTES DE VER</span>
+    <span>✦</span>
+  </aside>
+
+  <main class="container">
+
+    <!-- Emblema e Cabeçalho Sacro -->
+    <header class="header-center">
+      <div class="sacred-badge">
+        <span>🕊️</span>
+        <span>Oportunidade de Bênção</span>
+      </div>
+
+      <h1 class="main-headline">
+        Espere um momento…<br />
+        <span class="highlight-gold">Antes de sair,</span> Deus reservou uma<br />
+        <span class="highlight-crimson">bênção de proteção</span> para você
+      </h1>
+
+      <p class="subtitle">
+        Receba agora o <strong>Grimório Sagrado com as Orações dos 4 Arcanjos</strong> com 
+        <span class="discount-highlight">60% de Desconto</span> (R$ 100 de economia exclusiva).
+      </p>
+    </header>
+
+    <!-- Confirmação da Novena -->
+    <section class="success-box" aria-label="Confirmação de acesso">
+      <div class="success-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6 9 17l-5-5"/>
+        </svg>
+        <span>Sua contribuição foi confirmada com sucesso!</span>
+      </div>
+      <p>Seu acesso completo à Novena está sendo liberado e enviado agora para o seu e-mail e WhatsApp.</p>
+      <p>Você deu um passo de fé abençoado. Para blindar sua caminhada e selar a proteção celestial sobre sua casa, uma condição extraordinária foi reservada para você:</p>
+    </section>
+
+    <!-- Seção de Quebra de Objeções -->
+    <h2 class="section-title">Nós compreendemos o seu coração…</h2>
+
+    <section class="objections-box">
+      <p>É completamente natural e compreensível se você pensou:</p>
+      
+      <div class="obj-item">
+        <span class="icon-cross">✦</span>
+        <span>"Depois eu vejo isso com calma..."</span>
+      </div>
+      <div class="obj-item">
+        <span class="icon-cross">✦</span>
+        <span>"Não sei se posso investir mais agora..."</span>
+      </div>
+      <div class="obj-item">
+        <span class="icon-cross">✦</span>
+        <span>"Será que eu realmente preciso desse Grimório?"</span>
+      </div>
+
+      <div class="discount-callout">
+        Foi justamente por reconhecer sua devoção que liberamos esta bênção com 
+        <strong>60% de Desconto imediato (R$ 100 abatidos do valor original)</strong>.
+      </div>
+      <p style="margin-top: 14px; font-size: 14px; color: var(--text-main);">
+        Veja por que acessar este Grimório Sagrado agora fará toda a diferença na sua paz espiritual:
+      </p>
+    </section>
+
+    <!-- O que é o Grimório dos Arcanjos -->
+    <h2 class="section-title">O que é o Grimório dos Arcanjos?</h2>
+
+    <article class="product-desc">
+      <p>
+        É um tesouro devocional secular preservado pela tradição, voltado a clamar a intercessão
+        dos 4 Santos Arcanjos de Deus para desatar os nós da vida financeira, curar as aflições da alma e do corpo,
+        e afastar toda inveja e perturbação espiritual do seu lar.
+      </p>
+
+      <!-- Grade dos 4 Santos Arcanjos -->
+      <div class="archangels-grid">
+        <div class="archangel-card">
+          <div class="archangel-icon">⚔️</div>
+          <div>
+            <div class="archangel-name">São Miguel Arcanjo</div>
+            <div class="archangel-role">Defesa contra o mal e quebra de laços</div>
+          </div>
+        </div>
+
+        <div class="archangel-card">
+          <div class="archangel-icon">🌿</div>
+          <div>
+            <div class="archangel-name">São Rafael Arcanjo</div>
+            <div class="archangel-role">Cura dos males e guia nos caminhos</div>
+          </div>
+        </div>
+
+        <div class="archangel-card">
+          <div class="archangel-icon">🕊️</div>
+          <div>
+            <div class="archangel-name">São Gabriel Arcanjo</div>
+            <div class="archangel-role">Boas notícias e iluminação do coração</div>
+          </div>
+        </div>
+
+        <div class="archangel-card">
+          <div class="archangel-icon">🕯️</div>
+          <div>
+            <div class="archangel-name">São Uriel Arcanjo</div>
+            <div class="archangel-role">Luz na provação e discernimento</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 14px; color: var(--text-muted); font-style: italic; text-align: center;">
+        "Eles são os sentinelas enviados por Deus para guardar você em todos os seus passos."
+      </p>
+    </article>
+
+    <!-- Imagem Hero do Grimório com acabamento nobre -->
+    <div class="grimorio-hero">
+      <img src="images/grimorio.png" alt="Grimório dos Arcanjos" loading="lazy" />
+    </div>
+
+    <!-- ═══ Box de Preço #1 (60% OFF com R$100 de Desconto) ═══ -->
+    <section class="price-box" aria-label="Oferta com 60% de Desconto">
+      
+      <div class="price-anchor-wrap">
+        <div class="old-price-label">Na página anterior, o valor era:</div>
+        <div class="old-price-val">De R$ 167 à vista</div>
+      </div>
+
+      <!-- Badge de 60% de Desconto -->
+      <div>
+        <span class="badge-discount-percent">
+          🔥 60% DE DESCONTO (ECONOMIA DE R$ 100) 🔥
+        </span>
+      </div>
+
+      <div class="special-offer-title">Condição Especial e Exclusiva HOJE:</div>
+
+      <!-- Destaque das Parcelas -->
+      <div class="price-highlight-card">
+        <div class="installments">12x R$ 7,02</div>
+        <div class="installment-sub">no cartão de crédito</div>
+      </div>
+
+      <div class="cash-price-row">ou R$ 67 à vista</div>
+      <div class="economy-text">✨ Você economiza R$ 100 redondos nesta bênção única</div>
+
+      <!-- Botão de Compra Principal Cakto -->
+      <a 
+        href="https://pay.cakto.com.br/mv7vkb5" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn-sacred-cta btn-checkout-link"
+        id="btn-buy-1"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+        </svg>
+        <span>QUERO ESSA OPORTUNIDADE ÚNICA</span>
+      </a>
+
+      <!-- Botão de Recusa -->
+      <a href="/area/" class="btn-refuse-sacred" id="btn-refuse-1">
+        não, eu abro mão da proteção dos santos arcanjos na minha vida
+      </a>
+
+      <div class="security-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span>Pagamento seguro • Acesso imediato no Portal • Garantia de 7 dias</span>
+      </div>
+    </section>
+
+    <!-- Benefícios Incluídos no Grimório -->
+    <section class="benefits-card">
+      <h3 class="benefits-header">O que está incluído no Grimório dos Arcanjos:</h3>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">✦</div>
+        <div class="benefit-text"><strong>Orações de Ativação e Devoção:</strong> preces sagradas para clamar o auxílio dos 4 Santos Arcanjos todos os dias.</div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">✦</div>
+        <div class="benefit-text"><strong>Como alcançar o socorro celestial:</strong> o método de oração ensinado pelos antigos para obter graças nas causas difíceis.</div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">✦</div>
+        <div class="benefit-text"><strong>Corte de nós e amarras:</strong> a invocação a São Miguel Arcanjo para romper laços de aflição, desânimo e perseguição.</div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">✦</div>
+        <div class="benefit-text"><strong>Sente um novo nó se formando na sua vida?</strong> Reze esta oração de guarda preventiva e imediata.</div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">✦</div>
+        <div class="benefit-text"><strong>A bênção da Providência:</strong> a prece que atrai o fluxo da serenidade e da prosperidade cristã para o seu lar.</div>
+      </div>
+    </section>
+
+    <!-- Segunda Imagem Hero -->
+    <div class="grimorio-hero">
+      <img src="images/grimorio.png" alt="Grimório dos Arcanjos" loading="lazy" />
+    </div>
+
+    <!-- ═══ Box de Preço #2 (Fechamento) ═══ -->
+    <section class="price-box" aria-label="Condição Final">
+      <div class="price-anchor-wrap">
+        <div class="old-price-label">Valor normal do Grimório:</div>
+        <div class="old-price-val">De R$ 167 à vista</div>
+      </div>
+
+      <div>
+        <span class="badge-discount-percent">
+          🔥 60% DE DESCONTO EXCLUSIVO 🔥
+        </span>
+      </div>
+
+      <div class="special-offer-title">Apenas nesta página especial:</div>
+
+      <div class="price-highlight-card">
+        <div class="installments">12x R$ 7,02</div>
+        <div class="installment-sub">ou R$ 67 à vista (Economia de R$ 100)</div>
+      </div>
+
+      <div class="economy-text" style="margin-top: 8px;">
+        Desconto especial de 60% aplicado • Disponível somente nesta sessão
+      </div>
+
+      <!-- Botão de Compra Principal Cakto -->
+      <a 
+        href="https://pay.cakto.com.br/mv7vkb5" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn-sacred-cta btn-checkout-link"
+        id="btn-buy-2"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+        </svg>
+        <span>QUERO ESSA OPORTUNIDADE ÚNICA</span>
+      </a>
+
+      <!-- Botão de Recusa -->
+      <a href="/area/" class="btn-refuse-sacred" id="btn-refuse-2">
+        não, eu abro mão da proteção dos santos arcanjos na minha vida
+      </a>
+
+      <div class="security-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span>🔒 Pagamento 100% Seguro • Liberação Imediata no Portal</span>
+      </div>
+    </section>
+
+    <!-- Rodapé Discreto -->
+    <footer class="sacred-footer">
+      <p>✦ Grimório Sagrado dos Arcanjos · Todos os direitos reservados ✦</p>
+      <p>Esta é uma condição de bênção reservada exclusivamente para devotos confirmados.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    // Repasse dinâmico de parâmetros de rastreamento (UTMs e SRC) para os botões Cakto
+    (function() {
+      if (window.location.search) {
+        var searchParams = new URLSearchParams(window.location.search);
+        var links = document.querySelectorAll('.btn-checkout-link');
+        links.forEach(function(link) {
+          try {
+            var url = new URL(link.href);
+            searchParams.forEach(function(val, key) {
+              url.searchParams.set(key, val);
+            });
+            link.href = url.toString();
+          } catch(e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
