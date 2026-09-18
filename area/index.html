@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Sagrado — Novena de Nossa Senhora Desatadora dos Nós</title>
+  <meta name="description"
+    content="Portal Sagrado oficial da Novena, orações, músicas e áudiolivro de Nossa Senhora Desatadora dos Nós.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/area/area.css">
+  <style>
+    /* Estilos Premium da tela de Login (Otimizada para Idosos & Mobile-First) */
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 16px 48px;
+      background: radial-gradient(ellipse at 50% 15%, rgba(201, 139, 44, 0.12) 0%, rgba(250, 248, 245, 1) 75%);
+    }
+
+    .login-card-wrapper {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .login-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .login-avatar-wrap {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .login-avatar-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: var(--radius-full);
+      background: radial-gradient(circle, rgba(201, 139, 44, 0.35) 0%, transparent 70%);
+      animation: avatarHalo 3s infinite ease-in-out;
+    }
+
+    @keyframes avatarHalo {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    .login-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: var(--radius-full);
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+      border: 3.5px solid var(--primary);
+      box-shadow: 0 6px 24px rgba(201, 139, 44, 0.35);
+      display: block;
+    }
+
+    .login-tagline {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .login-title {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    @media (min-width: 640px) {
+      .login-title {
+        font-size: 34px;
+      }
+    }
+
+    .login-subtitle {
+      font-size: 16px;
+      color: #574e44;
+      margin-top: 8px;
+      line-height: 1.45;
+      max-width: 420px;
+    }
+
+    .login-box {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 2px solid rgba(201, 139, 44, 0.4);
+      padding: 30px 24px;
+      box-shadow: 0 12px 36px rgba(44, 26, 14, 0.09);
+    }
+
+    @media (min-width: 640px) {
+      .login-box {
+        padding: 36px 32px;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-label {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .input-with-icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 18px;
+      color: var(--primary);
+      pointer-events: none;
+    }
+
+    .login-input {
+      width: 100%;
+      height: 58px;
+      padding: 16px 18px 16px 52px;
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--border-color);
+      font-size: 17px;
+      font-family: inherit;
+      background: #fdfbf7;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .login-input:focus {
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(201, 139, 44, 0.18);
+    }
+
+    .login-input::placeholder {
+      color: #9ca3af;
+      font-size: 15px;
+    }
+
+    .btn-login-submit {
+      width: 100%;
+      height: 58px;
+      background: linear-gradient(135deg, #c98b2c 0%, #b37920 100%);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: var(--radius-full);
+      margin-top: 20px;
+      box-shadow: 0 6px 20px rgba(201, 139, 44, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-login-submit:hover {
+      background: linear-gradient(135deg, #d49537 0%, #bf8226 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 139, 44, 0.5);
+    }
+
+    /* Exemplos amigáveis de acesso */
+    .login-options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .login-option-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fbf9f5;
+      border: 1px solid #eee8df;
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      color: #574e44;
+    }
+
+    .login-option-icon {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .login-option-pill strong {
+      color: var(--text-main);
+    }
+
+    /* Card de Ajuda e Confiança */
+    .login-help-card {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1.5px solid rgba(201, 139, 44, 0.3);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .login-help-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-full);
+      background: rgba(201, 139, 44, 0.12);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .login-security-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #059669;
+      background: #ecfdf5;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 4px;
+    }
+
+    .login-footer-text {
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    .login-footer-text a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- VIEW 1: TELA DE LOGIN (SE NÃO ESTIVER LOGADO) -->
+  <div id="login-view" class="login-container" style="display: none;">
+    <div class="login-card-wrapper">
+      <header class="login-header">
+        <div class="login-avatar-wrap">
+          <img src="/public/area/maria-avatar-BkoYwFrM.jpg" alt="Nossa Senhora Desatadora dos Nós" class="login-avatar">
+        </div>
+        <span class="login-tagline">✦ Portal Sagrado da Novena ✦</span>
+        <h1 class="login-title">Entrar na Novena</h1>
+        <p class="login-subtitle">Digite abaixo o e-mail, telefone ou CPF cadastrado na compra para acessar suas
+          orações.</p>
+      </header>
+
+      <div class="login-box">
+        <form id="login-form" onsubmit="handleLoginSubmit(event)">
+          <div class="form-group">
+            <label for="login-identifier" class="form-label">
+              <span>Informe seu E-mail, Celular ou CPF utilizado na compra:</span>
+            </label>
+            <div class="input-with-icon">
+              <svg class="input-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <input type="text" id="login-identifier" class="login-input"
+                placeholder="Digite seu e-mail, celular ou CPF..." required minlength="5" autofocus
+                autocomplete="username">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-login-submit">
+            <span>Entrar no Portal Sagrado</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="login-options-grid">
+          <div class="login-option-pill">
+            <span class="login-option-icon">✉️</span>
+            <span><strong>E-mail:</strong> O mesmo que você usou na compra</span>
+          </div>
+          <div class="login-option-pill">
+            <span class="login-option-icon">📱</span>
+            <span><strong>Celular:</strong> Seu número com DDD (ex: 11999998888)</span>
+          </div>
+          <div class="login-option-pill">
+            <span class="login-option-icon">🪪</span>
+            <span><strong>CPF:</strong> Seus 11 números cadastrados</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-help-card">
+        <div class="login-help-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+          </svg>
+        </div>
+        <div>
+          <span class="login-security-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Ambiente 100% Seguro
+          </span>
+          <p
+            style="font-family:var(--font-serif); font-weight:700; font-size:16px; color:var(--text-main); margin-top:2px;">
+            Acesso Fácil e Direto</p>
+          <p style="font-size:14px; color:#6b5f54; line-height:1.4; margin-top:2px;">Não precisa de senha complicada.
+            Basta preencher seus dados da compra acima e tocar no botão dourado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- VIEW 2: DASHBOARD DO PORTAL SAGRADO (QUANDO LOGADO) -->
+  <div id="members-view" style="display: none;">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-left">
+        <button type="button" class="btn-menu-toggle" onclick="toggleSidebar(true)" aria-label="Abrir Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
+        <a href="/area/" class="brand-logo">
+          <img src="/public/area/maria-avatar-BkoYwFrM.jpg" alt="Nossa Senhora Desatadora dos Nós"
+            class="brand-avatar-img">
+          <div class="brand-text-wrap">
+            <span class="brand-tagline">Portal Sagrado</span>
+            <span class="brand-title">Maria Desatadora</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero Banner -->
+      <section class="hero-card">
+        <div class="hero-image-wrapper">
+          <img src="/public/area/maria-hero-JAbaTm3M.jpg" alt="Nossa Senhora Desatadora dos Nós" class="hero-image">
+          <div class="hero-gradient"></div>
+          <div class="hero-content">
+            <p class="hero-welcome">Bem-vindo(a) ao seu</p>
+            <h1 class="hero-title">Portal Sagrado</h1>
+            <p class="hero-desc">Que Maria desate todos os nós da sua vida e abençoe seus passos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Devocional de Intenção & Progresso dos 9 Dias -->
+      <div id="novena-progress-home"></div>
+
+      <!-- Lista de Módulos e Seções Individuais do Portal Sagrado -->
+      <div id="portal-sections-list">
+        <!-- Renderizado dinamicamente via data.js -->
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-cross">✦</div>
+        <p class="footer-prayer">“Maria, Desatadora dos Nós, rogai por nós que recorremos a Vós.”</p>
+        <div class="footer-brand">
+          <span class="footer-title">Portal Sagrado</span>
+          <span class="footer-copy">Novena de Nossa Senhora Desatadora dos Nós</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/area/data.js"></script>
+  <script src="/area/progress.js"></script>
+  <script src="/area/auth.js"></script>
+  <script>
+    // Inicialização da Tela
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuthState();
+      window.addEventListener('novena-progress-updated', renderDevotionalProgressHome);
+    });
+
+    function checkAuthState() {
+      const loginView = document.getElementById('login-view');
+      const membersView = document.getElementById('members-view');
+
+      if (NovenaAuth.isLoggedIn()) {
+        loginView.style.display = 'none';
+        membersView.style.display = 'block';
+        renderDevotionalProgressHome();
+        renderPortalSections();
+      } else {
+        loginView.style.display = 'flex';
+        membersView.style.display = 'none';
+      }
+    }
+
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      const identifier = (document.getElementById('login-identifier').value || '').trim();
+      if (NovenaAuth.login(identifier)) {
+        checkAuthState();
+      } else {
+        alert('Por favor, digite seu e-mail, telefone ou CPF completo da compra (mínimo de 5 caracteres).');
+      }
+    }
+
+    // Renderizar Card Devocional de Progresso e Intenção na Home
+    function renderDevotionalProgressHome() {
+      const container = document.getElementById('novena-progress-home');
+      if (!container || !window.NovenaProgress) return;
+
+      const state = NovenaProgress.get();
+
+      // 1. Estado: Novena 100% Concluída
+      if (NovenaProgress.isFinished()) {
+        container.innerHTML = `
+          <div class="devotional-completed-banner">
+            <div class="completed-cross-icon">✦</div>
+            <h2 class="completed-title">Novena dos 9 Dias Concluída!</h2>
+            ${state.intention ? `
+              <div class="intention-saved-box" style="max-width: 520px; margin: 12px auto; text-align: left;">
+                <svg class="intention-saved-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                <div class="intention-saved-text">“${state.intention}”</div>
+              </div>
+            ` : ''}
+            <p class="completed-desc">Parabéns por perseverar nos 9 dias de oração e entrega. Que Nossa Senhora Desatadora dos Nós derrame todas as bênçãos sobre a sua vida.</p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px;">
+              <a href="/area/novena/dias/" class="btn-continue-novena">Revisitar Orações</a>
+              <button type="button" class="btn-new-cycle" onclick="handleResetNovenaHome()">✦ Iniciar Novo Ciclo Devocional</button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // 2. Estado: Novena Ainda Não Iniciada (Formulário de Intenção)
+      if (!state.started) {
+        container.innerHTML = `
+          <section class="devotional-progress-card">
+            <div class="devotional-card-header">
+              <span class="devotional-card-badge">✦ Seu Caminho Devocional</span>
+              <span class="devotional-card-cycle">Ciclo 1</span>
+            </div>
+            <h2 class="devotional-card-title">Inicie sua Novena de 9 Dias</h2>
+            <p class="devotional-card-desc">Escreva a graça, causa ou nós da sua vida que você entrega com fé nas mãos de Nossa Senhora:</p>
+            
+            <form class="intention-form" onsubmit="handleStartNovenaHome(event)">
+              <div class="intention-input-wrap">
+                <input type="text" id="home-intention-input" class="intention-input" placeholder="Ex: Pela paz na minha família, saúde, libertação e abertura dos caminhos..." required>
+              </div>
+              <button type="submit" class="btn-devotional-start">
+                ✦ Consagrar Intenção e Iniciar Novena
+              </button>
+            </form>
+          </section>
+        `;
+        return;
+      }
+
+      // 3. Estado: Novena em Andamento
+      const activeDay = NovenaProgress.getCurrentActiveDay();
+      const dateInfo = NovenaProgress.getDayDateInfo(activeDay);
+      const completedCount = state.completedDays.length;
+      const pct = Math.round((completedCount / 9) * 100);
+
+      container.innerHTML = `
+        <section class="devotional-progress-card">
+          <div class="devotional-card-header">
+            <span class="devotional-card-badge">✦ Novena em Andamento</span>
+            <span class="devotional-card-cycle">Ciclo ${state.cycle || 1}</span>
+          </div>
+          
+          <h2 class="devotional-card-title">Seu Progresso nos 9 Dias</h2>
+
+          ${state.intention ? `
+            <div class="intention-saved-box">
+              <svg class="intention-saved-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <div>
+                <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:var(--primary); display:block; margin-bottom:2px;">Sua Intenção Consagrada:</span>
+                <span class="intention-saved-text">“${state.intention}”</span>
+              </div>
+            </div>
+          ` : ''}
+
+          <div style="margin-top: 14px;">
+            <div class="progress-meta">
+              <span class="progress-meta-label">${completedCount} de 9 dias rezados</span>
+              <span class="progress-meta-percent">${pct}% Concluído</span>
+            </div>
+            <div class="devotional-progress-track">
+              <div class="devotional-progress-fill" style="width: ${pct}%"></div>
+            </div>
+          </div>
+
+          <div class="devotional-card-actions">
+            <div class="devotional-today-info">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Próxima oração: <strong>${activeDay}º Dia (${dateInfo.label})</strong></span>
+            </div>
+            <a href="/area/novena/dias/" class="btn-continue-novena">
+              Rezar ${activeDay}º Dia Agora
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </section>
+      `;
+    }
+
+    function handleStartNovenaHome(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('home-intention-input');
+      const intention = input ? input.value : '';
+      if (window.NovenaProgress) {
+        window.NovenaProgress.start(intention);
+        renderDevotionalProgressHome();
+        window.showSacredToast('Sua Novena foi consagrada com bênçãos!');
+      }
+    }
+
+    function handleResetNovenaHome() {
+      if (confirm('Deseja iniciar um novo ciclo de 9 dias com uma nova intenção?')) {
+        const novaIntencao = prompt('Escreva a nova intenção para este ciclo:', '');
+        if (novaIntencao !== null && window.NovenaProgress) {
+          window.NovenaProgress.reset(novaIntencao);
+          renderDevotionalProgressHome();
+          window.showSacredToast('Novo ciclo devocional iniciado!');
+        }
+      }
+    }
+
+    // Renderizar Todas as Seções Individuais do Portal Sagrado
+    function renderPortalSections() {
+      const container = document.getElementById('portal-sections-list');
+      if (!container || !window.NOVENA_DATA) return;
+
+      const items = window.NOVENA_DATA.portalSections || [];
+      container.innerHTML = items.map(item => `
+        <section class="portal-section" id="sec-${item.id}">
+          <div class="section-title-wrap">
+            <span class="section-bar"></span>
+            <div class="section-title-content">
+              <h2 class="section-title">${item.sectionTitle}</h2>
+              <p class="section-desc">${item.sectionDesc}</p>
+            </div>
+          </div>
+
+          <a href="${item.to}" class="product-card">
+            <div class="product-grid">
+              <div class="product-img-wrap">
+                <img src="${item.img}" alt="${item.title}" class="product-img" loading="lazy">
+              </div>
+              <div class="product-info">
+                <span class="badge-liberado">${item.badge}</span>
+                <h3 class="product-title">${item.title}</h3>
+                <p class="product-desc">${item.desc}</p>
+                <div class="btn-cta-primary">
+                  ${item.btnText}
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+      `).join('');
+    }
+  </script>
+</body>
+
+</html>

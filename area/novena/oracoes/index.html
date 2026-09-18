@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orações Especiais — Portal Sagrado</title>
+  <meta name="description" content="Orações temáticas de cura, família, prosperidade, paz e proteção.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/area/area.css">
+  <style>
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .back-nav:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateX(-2px);
+    }
+
+    .category-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      scrollbar-width: thin;
+    }
+
+    .cat-tab-btn {
+      flex-shrink: 0;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .cat-tab-btn.active, .cat-tab-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(201, 139, 44, 0.3);
+    }
+
+    .oracoes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 640px) {
+      .oracoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .oracoes-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .oracao-card {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    .oracao-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-3px);
+    }
+
+    .oracao-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #1a120b;
+      overflow: hidden;
+    }
+
+    .oracao-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .oracao-card:hover .oracao-img {
+      transform: scale(1.05);
+    }
+
+    .oracao-play-circle {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+    }
+
+    .oracao-glow {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-full);
+      background: rgba(201, 139, 44, 0.95);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 18px rgba(201, 139, 44, 0.5);
+      transition: transform 0.2s ease;
+    }
+
+    .oracao-card:hover .oracao-glow {
+      transform: scale(1.1);
+    }
+
+    .oracao-card-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      color: #ffffff;
+    }
+
+    .oracao-card-title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <button type="button" class="btn-menu-toggle" onclick="toggleSidebar(true)" aria-label="Abrir Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+      <a href="/area/" class="brand-logo">
+        <img src="/public/area/maria-avatar-BkoYwFrM.jpg" alt="Nossa Senhora Desatadora dos Nós" class="brand-avatar-img">
+        <div class="brand-text-wrap">
+          <span class="brand-tagline">Portal Sagrado</span>
+          <span class="brand-title">Maria Desatadora</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="/area/novena/" class="back-nav">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Voltar para o Menu da Novena
+    </a>
+
+    <div style="margin-bottom: 24px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span class="section-bar" style="background:var(--accent);"></span>
+        <h1 style="font-family:var(--font-serif); font-size:30px; font-weight:700; color:var(--text-main);">Orações Especiais</h1>
+      </div>
+      <p style="font-size:16px; color:var(--text-muted); margin-top:6px; margin-left:18px;">Escolha uma categoria e toque para ler e rezar a oração completa.</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs" id="category-tabs">
+      <button type="button" class="cat-tab-btn active" onclick="filterCategory('todas', this)">Todas as Orações</button>
+      <!-- Categorias geradas via data.js -->
+    </div>
+
+    <div class="oracoes-grid" id="oracoes-grid">
+      <!-- Renderizado via data.js -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-cross">✦</div>
+      <p class="footer-prayer">“Maria, Desatadora dos Nós, rogai por nós que recorremos a Vós.”</p>
+      <div class="footer-brand">
+        <span class="footer-title">Portal Sagrado</span>
+        <span class="footer-copy">Novena de Nossa Senhora Desatadora dos Nós</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/area/data.js"></script>
+  <script src="/area/auth.js"></script>
+  <script>
+    let activeCategory = 'todas';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      NovenaAuth.requireAuth();
+      renderCategoryTabs();
+      renderOracoes('todas');
+    });
+
+    function renderCategoryTabs() {
+      const container = document.getElementById('category-tabs');
+      if (!container || !window.NOVENA_DATA) return;
+
+      const tabsHtml = window.NOVENA_DATA.categoriasOracoes.map(cat => `
+        <button type="button" class="cat-tab-btn" onclick="filterCategory('${cat.slug}', this)">
+          ${cat.title}
+        </button>
+      `).join('');
+
+      container.innerHTML = `
+        <button type="button" class="cat-tab-btn active" onclick="filterCategory('todas', this)">Todas</button>
+        ${tabsHtml}
+      `;
+    }
+
+    function filterCategory(slug, btn) {
+      activeCategory = slug;
+      document.querySelectorAll('.cat-tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderOracoes(slug);
+    }
+
+    function renderOracoes(slug) {
+      const grid = document.getElementById('oracoes-grid');
+      if (!grid || !window.NOVENA_DATA) return;
+
+      let list = [];
+      if (slug === 'todas') {
+        window.NOVENA_DATA.categoriasOracoes.forEach(cat => {
+          cat.oracoes.forEach(o => list.push({ ...o, categoria: cat.title }));
+        });
+      } else {
+        const cat = window.NOVENA_DATA.categoriasOracoes.find(c => c.slug === slug);
+        if (cat) {
+          list = cat.oracoes.map(o => ({ ...o, categoria: cat.title }));
+        }
+      }
+
+      grid.innerHTML = list.map(item => `
+        <button type="button" class="oracao-card" onclick='openPlayer(${JSON.stringify(item)})'>
+          <div class="oracao-img-wrap">
+            <img src="/public/area/oracoes-7q3QFUIh.jpg" alt="${item.title}" loading="lazy" class="oracao-img">
+            <div class="oracao-play-circle">
+              <div class="oracao-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+            </div>
+            <div class="oracao-card-bottom">
+              <span style="font-size:11px; text-transform:uppercase; letter-spacing:1px; background:rgba(201,139,44,0.85); padding:2px 8px; border-radius:10px; font-weight:700; display:inline-block; margin-bottom:4px;">${item.categoria}</span>
+              <h3 class="oracao-card-title">${item.title}</h3>
+            </div>
+          </div>
+        </button>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

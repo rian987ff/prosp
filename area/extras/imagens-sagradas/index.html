@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagens Sagradas — Portal Sagrado</title>
+  <meta name="description" content="Baixe as imagens em alta resolução para imprimir, emoldurar ou usar no celular.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/area/area.css">
+  <style>
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .back-nav:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateX(-2px);
+    }
+
+    .imagens-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 640px) {
+      .imagens-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .img-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 2px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+
+    .img-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .img-preview-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: #111;
+      overflow: hidden;
+    }
+
+    .img-preview {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .img-card:hover .img-preview {
+      transform: scale(1.03);
+    }
+
+    .img-tag-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(4px);
+    }
+
+    .img-info-box {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      gap: 16px;
+    }
+
+    .img-info-box h3 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .img-info-box p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .btn-download-img {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 20px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 12px rgba(201, 139, 44, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-download-img:hover {
+      background: var(--primary-hover);
+      gap: 12px;
+    }
+
+    .tip-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <button type="button" class="btn-menu-toggle" onclick="toggleSidebar(true)" aria-label="Abrir Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+      <a href="/area/" class="brand-logo">
+        <img src="/public/area/maria-avatar-BkoYwFrM.jpg" alt="Nossa Senhora Desatadora dos Nós" class="brand-avatar-img">
+        <div class="brand-text-wrap">
+          <span class="brand-tagline">Portal Sagrado</span>
+          <span class="brand-title">Maria Desatadora</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="/area/" class="back-nav">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Voltar ao Portal Sagrado
+    </a>
+
+    <div style="margin-bottom: 28px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span class="section-bar"></span>
+        <h1 style="font-family:var(--font-serif); font-size:28px; font-weight:700; color:var(--text-main);">Imagens Sagradas em Alta Resolução</h1>
+      </div>
+      <p style="font-size:16px; color:var(--text-muted); margin-top:6px; margin-left:18px;">Baixe as imagens em alta resolução para imprimir, emoldurar ou usar no celular.</p>
+    </div>
+
+    <div class="imagens-grid" id="imagens-grid">
+      <!-- Renderizado via data.js -->
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 Dica:</strong> No celular, se o download não iniciar automaticamente, toque e segure o dedo sobre a imagem e escolha a opção <em>“Salvar imagem”</em> ou <em>“Fazer download da imagem”</em>.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-cross">✦</div>
+      <p class="footer-prayer">“Maria, Desatadora dos Nós, rogai por nós que recorremos a Vós.”</p>
+      <div class="footer-brand">
+        <span class="footer-title">Portal Sagrado</span>
+        <span class="footer-copy">Novena de Nossa Senhora Desatadora dos Nós</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/area/data.js"></script>
+  <script src="/area/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NovenaAuth.requireAuth();
+      renderImagens();
+    });
+
+    function renderImagens() {
+      const grid = document.getElementById('imagens-grid');
+      if (!grid || !window.NOVENA_DATA) return;
+
+      grid.innerHTML = window.NOVENA_DATA.imagensSagradas.map(img => `
+        <article class="img-card">
+          <div class="img-preview-wrap">
+            <img src="${img.src}" alt="${img.title}" loading="lazy" class="img-preview">
+            <span class="img-tag-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              Alta Resolução
+            </span>
+          </div>
+          <div class="img-info-box">
+            <div>
+              <h3>${img.title}</h3>
+              <p>${img.subtitle}</p>
+            </div>
+            <a href="${img.src}" download="${img.filename}" class="btn-download-img">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Baixar imagem
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
